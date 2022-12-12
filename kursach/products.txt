@@ -1,0 +1,5 @@
+id | name | price | category id | rating |
+1   Хлеб   2.49   1   4.5   
+3   Молоко БК   1.91   3   4.9   
+6   dwd   1.0   1   3.0   
+7   dfg   356.8784   11   5.8   

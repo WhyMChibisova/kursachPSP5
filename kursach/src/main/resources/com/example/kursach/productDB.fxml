@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #FFE4C4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach.client.ProductDBController">
+    <children>
+                <Button fx:id="addProductButton" layoutX="73.0" layoutY="357.0" mnemonicParsing="false" onAction="#OnAddProductButtonClicked" text="Добавить" AnchorPane.bottomAnchor="0.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+                <Button fx:id="editProductButton" layoutX="263.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#OnEditProductButtonClicked" text="Редактировать">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+                <Button fx:id="deleteProdutButton" layoutX="491.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#OnDeleteProductButtonClicked" text="Удалить">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableProducts" layoutX="1.0" prefHeight="347.0" prefWidth="648.0">
+         <columns>
+            <TableColumn fx:id="idProduct" prefWidth="35.20001292228699" text="ID" />
+            <TableColumn fx:id="nameProduct" onEditCommit="#editNameProduct" prefWidth="343.20000076293945" text="name" />
+            <TableColumn fx:id="priceProduct" onEditCommit="#editPriceProduct" prefWidth="100.0" text="price" />
+            <TableColumn fx:id="categoryProduct" onEditCommit="#editCategoryProduct" prefWidth="80.00006103515625" text="category" />
+            <TableColumn fx:id="ratingProduct" onEditCommit="#editRatingProduct" prefWidth="85.60009765625" text="rating" />
+         </columns>
+      </TableView>
+    </children>
+</AnchorPane>

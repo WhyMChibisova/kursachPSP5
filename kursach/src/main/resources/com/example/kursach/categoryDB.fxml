@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #FFE4C4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach.client.CategoryDBController">
+    <children>
+        <TableView fx:id="tableCategory" layoutY="9.0" prefHeight="434.0" prefWidth="646.0">
+            <columns>
+                <TableColumn fx:id="idCategory" prefWidth="49.600006103515625" text="ID" />
+                <TableColumn fx:id="nameCategory" prefWidth="591.1999816894531" text="name" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

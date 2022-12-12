@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" style="-fx-background-color: #BC8F8F;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach.client.UserMenuController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="51.0" prefHeight="450.0" prefWidth="850.0" style="-fx-background-color: #FFE4C4;">
+         <children>
+            <Accordion prefHeight="351.0" prefWidth="202.0">
+              <panes>
+                <TitledPane animated="false" text="База данных">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="productDBButton" mnemonicParsing="false" onAction="#OnProductDBButtonClicked" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="Таблица продуктов" />
+                              <Separator prefWidth="200.0" />
+                              <Button fx:id="categoryDBButton" mnemonicParsing="false" onAction="#OnCategoryDBButtonClicked" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="Таблица категорий" />
+                              <Separator prefWidth="200.0" />
+                              <Button fx:id="saleDBButton" mnemonicParsing="false" onAction="#OnSaleDBButtonClicked" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: transparent;" text="Таблица продаж" />
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Сортировка">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ComboBox fx:id="comboBoxTableSort" prefHeight="26.0" prefWidth="186.0" promptText="Таблица">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Separator prefWidth="200.0" />
+                              <ComboBox fx:id="comboBoxFieldSort" prefHeight="26.0" prefWidth="183.0" promptText="Поле">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Separator prefWidth="200.0" />
+                              <TextField fx:id="fromSort" prefHeight="30.0" prefWidth="188.0" promptText="От">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin></TextField>
+                              <Separator prefWidth="200.0" />
+                              <TextField fx:id="toSort" prefHeight="30.0" promptText="До">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Separator prefWidth="200.0" />
+                              <Button fx:id="sortButton" mnemonicParsing="false" onAction="#OnSortButtonClicked" prefHeight="26.0" prefWidth="194.0" text="Сортировать">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Поиск">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ComboBox fx:id="comboBoxTableSearch" prefHeight="30.0" prefWidth="182.0" promptText="Таблица" />
+                              <Separator prefWidth="200.0">
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <ComboBox fx:id="comboBoxFieldSearch" prefHeight="30.0" prefWidth="182.0" promptText="Поле" />
+                              <Separator prefWidth="200.0">
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <TextField fx:id="valueSearch" promptText="Значение">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin></TextField>
+                              <Separator prefWidth="200.0">
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding>
+                              </Separator>
+                              <Button fx:id="searchButton" mnemonicParsing="false" onAction="#OnSearchButtonClicked" prefHeight="30.0" prefWidth="194.0" text="Поиск">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                  <TitledPane animated="false" text="Графики">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="1.0" layoutY="-2.0" prefHeight="223.0" prefWidth="202.0">
+                                 <children>
+                                    <Button fx:id="pieChartButton" mnemonicParsing="false" onAction="#OnPieChartButtonClicked" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: transparent;" text="Категория - количество продаж">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin></Button>
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Button fx:id="barChartButton" mnemonicParsing="false" onAction="#OnBarChartButtonClicked" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: transparent;" text="Дата - количество продаж">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Button fx:id="lineChartButton" mnemonicParsing="false" onAction="#OnLineChartButtonClicked" prefHeight="30.0" prefWidth="206.0" style="-fx-background-color: transparent;" text="Рейтинг - продукт" />
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Separator>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="Отчёт">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="224.0" prefWidth="202.0">
+                                 <children>
+                                    <ComboBox fx:id="comboBoxTableFile" prefHeight="26.0" prefWidth="205.0" promptText="Таблица">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </padding>
+                                    </Separator>
+                                    <Button fx:id="fileButton" mnemonicParsing="false" onAction="#OnFileButtonClicked" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Сгенерировать отчёт" />
+                                    <Separator prefWidth="200.0">
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding></Separator>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <StackPane fx:id="contentArea" layoutX="202.0" prefHeight="450.0" prefWidth="648.0" />
+         </children>
+        </AnchorPane>
+        <Label layoutX="342.0" layoutY="5.0" text="Market App" textFill="WHITE">
+            <font>
+                <Font name="Lucida Sans Unicode" size="30.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitButton" layoutX="770.0" layoutY="5.0" mnemonicParsing="false" onAction="#OnExit" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #FFE4C4; -fx-border-radius: 5;" text="Выход" textFill="#8e5252">
+            <font>
+                <Font name="Lucida Sans Unicode" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

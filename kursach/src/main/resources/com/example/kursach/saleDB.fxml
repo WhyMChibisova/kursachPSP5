@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #FFE4C4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kursach.client.SaleDBController">
+    <children>
+        <Button fx:id="addSaleButton" layoutX="73.0" layoutY="357.0" mnemonicParsing="false" onAction="#OnAddSaleButtonClicked" text="Добавить" AnchorPane.bottomAnchor="0.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="editSaleButton" layoutX="263.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#OnEditSaleButtonClicked" text="Редактировать">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="deleteProdutButton" layoutX="491.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#OnDeleteSaleButtonClicked" text="Удалить">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tableSales" layoutX="1.0" prefHeight="347.0" prefWidth="648.0">
+            <columns>
+                <TableColumn fx:id="idSale" prefWidth="69.60000920295715" text="ID" />
+                <TableColumn fx:id="product_idSale" onEditCommit="#editProductIDSale" prefWidth="246.3999786376953" text="product ID" />
+                <TableColumn fx:id="dateSale" prefWidth="164.0" text="date" />
+                <TableColumn fx:id="countSale" onEditCommit="#editCountSale" prefWidth="163.99993896484375" text="count" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
